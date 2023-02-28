@@ -1,0 +1,28 @@
+$date
+  Wed Feb 22 18:37:15 2023
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$var reg 1 ! e1_sim $end
+$var reg 1 " e2_sim $end
+$var reg 1 # s1_sim $end
+$scope module mycomponentet2undertest $end
+$var reg 1 $ e1 $end
+$var reg 1 % e2 $end
+$var reg 1 & s1 $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+0#
+0$
+0%
+0&
+#100000000000
+1"
+1%

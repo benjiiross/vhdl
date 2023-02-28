@@ -1,0 +1,26 @@
+$date
+  Thu Feb 23 20:00:35 2023
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$var reg 4 ! e1_sim[3:0] $end
+$var reg 4 " e2_sim[3:0] $end
+$var reg 8 # s1_sim[7:0] $end
+$var reg 1 $ c_in_sim $end
+$var reg 1 % c_out_sim $end
+$scope module mycomponentaddnbitsundertest $end
+$var reg 4 & e1[3:0] $end
+$var reg 4 ' e2[3:0] $end
+$var reg 1 ( c_in $end
+$var reg 8 ) s1[7:0] $end
+$var reg 1 * c_out $end
+$var reg 5 + my_e1[4:0] $end
+$var reg 5 , my_e2[4:0] $end
+$var reg 5 - my_c_in[4:0] $end
+$var reg 9 . my_s1[8:0] $end
+$upscope $end
+$enddefinitions $end

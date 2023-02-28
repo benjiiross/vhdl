@@ -1,0 +1,7 @@
+v 3
+file . "design.vhd" "20230222180944.000" "20230222191206.391":
+  entity et2 at 2( 26) + 0 on 47;
+  architecture et2_dataflow of et2 at 14( 206) + 0 on 48;
+file . "testbench.vhd" "20230222171834.000" "20230222191206.391":
+  entity myet2testbench at 2( 29) + 0 on 49;
+  architecture myet2testbench_arch of myet2testbench at 8( 125) + 0 on 50;
