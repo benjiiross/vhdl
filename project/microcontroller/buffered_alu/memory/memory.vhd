@@ -9,8 +9,7 @@ entity memory is
   port (
     INPUT : in std_logic_vector(SIZE - 1 downto 0);
     OUTPUT : out std_logic_vector(SIZE - 1 downto 0) := (others => '0');
-    CLK : in std_logic;
-    RESET : in std_logic
+    CLK, RESET : in std_logic
   );
 end memory;
 

@@ -1,0 +1,18 @@
+[libraries]
+
+alu.files = [
+  'microcontroller\buffered_alu\ALU\alu.vhd',
+  'microcontroller\buffered_alu\ALU\testbench.vhd',
+]
+
+memory.files = [
+  'microcontroller\buffered_alu\Memory\memory.vhd',
+  'microcontroller\buffered_alu\Memory\testbench.vhd',
+]
+
+buffered_alu.files = [
+  'microcontroller\buffered_alu\buffered_alu.vhd',
+  'microcontroller\buffered_alu\alu.vhd',
+  'microcontroller\buffered_alu\memory.vhd',
+  'microcontroller\buffered_alu\testbench.vhd',
+]
