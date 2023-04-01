@@ -4,6 +4,14 @@
 
 # TODO LIST:
 
+- [x] ALU
+- [ ] Buffers A and B
+- [ ] Buffers SR IN
+- [ ] Control Block
+- [ ] Memory Instruction
+- [ ] Memory Select FCT
+- [ ] Memory Select Out
+- [ ] Memory Cache 1 and 2
 
 
 ### 1. ALU
