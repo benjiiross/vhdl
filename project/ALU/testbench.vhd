@@ -11,10 +11,10 @@ architecture testbench of alu_tb is
   signal SR_IN : std_logic_vector (1 downto 0);
   signal SR_OUT : std_logic_vector (1 downto 0);
   signal S : std_logic_vector (7 downto 0);
-  signal CLK, RESET : std_logic := '0';
+  signal RESET : std_logic := '0';
+  signal CLK : std_logic := '0';
 
 begin
-  clock : CLK <= not CLK after 5 ns;
   alu_tb : entity work.alu
     port map(
       A => A,
@@ -23,19 +23,17 @@ begin
       SR_IN => SR_IN,
       SR_OUT => SR_OUT,
       S => S,
-      CLK => CLK,
-      RESET => RESET
+      RESET => RESET,
+      CLK => CLK
     );
+
+  CLK <= not CLK after 5 ns;
 
   testbench : process
   begin
     for i in 0 to 15 loop
       SEL_FCT <= std_logic_vector(to_unsigned(i, SEL_FCT'length));
-      if i = 3 then
-        RESET <= '1';
-      else
-        RESET <= '0';
-      end if;
+
       for j in 0 to 15 loop
         A <= std_logic_vector(to_unsigned(j, A'length));
 

@@ -13,7 +13,7 @@ architecture testbench of memory_instr_tb is
   signal SEL_OUT : std_logic_vector(1 downto 0);
 
 begin
-  memory_instr_tb : entity work.memory_instr
+  memory_instr_tb : entity work.instructions
     port map(
       CLK => CLK,
       RESET => RESET,

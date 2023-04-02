@@ -15,7 +15,7 @@
 
 
 ### 1. ALU
-
+THE ALU IS ONLY UPDATED WHEN SEL_FCT CHANGES
 The ALU is a combinational circuit that performs arithmetic and logic operations.
 Its objective is to do calculations using A, B, Serial inputs and a selector. The result is stored in the S output and a Serial Output.
 

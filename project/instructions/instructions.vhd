@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
 
-entity memory_instr is
+entity instructions is
   port (
     CLK : in std_logic;
     RESET : in std_logic;
@@ -11,12 +11,12 @@ entity memory_instr is
     SEL_ROUTE : out std_logic_vector(3 downto 0);
     SEL_OUT : out std_logic_vector(1 downto 0)
   );
-end memory_instr;
+end instructions;
 
-architecture memory_instr_arch of memory_instr is
+architecture instructions_arch of instructions is
 
 begin
-  memory_instr_process : process (CLK)
+  intructions_process : process (CLK)
     variable INSTRUCTION : std_logic_vector(9 downto 0) := (others => '1');
   begin
     if rising_edge(CLK) then
@@ -34,4 +34,4 @@ begin
     end if;
   end process;
 
-end memory_instr_arch;
+end instructions_arch;

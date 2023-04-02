@@ -16,3 +16,13 @@ buffered_alu.files = [
   'microcontroller\buffered_alu\memory.vhd',
   'microcontroller\buffered_alu\testbench.vhd',
 ]
+
+cached_alu.files = [
+  'cached_alu\buffered_alu.vhd',
+  'cached_alu\cached_alu.vhd',
+  'cached_alu\memory_cache.vhd',
+  'cached_alu\testbench.vhd',
+  'cached_alu\res_out_1.vhd',
+  'cached_alu\res_out_2.vhd',
+  'cached_alu\res_out_3.vhd',
+]

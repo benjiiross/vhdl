@@ -8,7 +8,7 @@ end memory_tb;
 architecture testbench of memory_tb is
 
   signal INPUT, OUTPUT : std_logic_vector(7 downto 0) := (others => '0');
-  signal CLK, RESET : std_logic := '0';
+  signal CLK, SET, RESET : std_logic := '0';
 
 begin
   clock : CLK <= not CLK after 5 ns;

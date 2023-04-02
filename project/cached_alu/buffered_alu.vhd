@@ -47,7 +47,7 @@ architecture buffered_alu_arch of buffered_alu is
   end component buffer_memory;
 
 begin
-  Buffer_A : buffer_memory
+  buffer_A : buffer_memory
   generic map(SIZE => 4)
   port map(
     INPUT => A,
@@ -56,7 +56,7 @@ begin
     RESET => RESET
   );
 
-  Buffer_B : buffer_memory
+  buffer_B : buffer_memory
   generic map(SIZE => 4)
   port map(
     INPUT => B,
@@ -65,7 +65,7 @@ begin
     RESET => RESET
   );
 
-  Buffer_SR_IN : buffer_memory
+  buffer_SR_IN : buffer_memory
   generic map(SIZE => 2)
   port map(
     INPUT => SR_IN,
