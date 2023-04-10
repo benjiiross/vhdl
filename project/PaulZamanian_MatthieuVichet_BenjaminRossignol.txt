@@ -1,0 +1,44 @@
+alu:
+  input -> A, B, SR_IN, SEL_FCT, CLK, RESET
+  output -> S, SR_OUR
+  purpose -> Used to do calculation based on SEL_FCT input.
+
+buffer:
+  input -> INPUT, CLK, RESET
+  output -> OUTPUT
+  purpose -> Set OUTPUT = INPUT at each rising edge of the clk.
+
+buffered_alu:
+  input -> A, B, SR_IN, SEL_FCT, CLK, RESET
+  output -> S, SR_OUR
+  contains -> alu, buffer
+  purpose -> Same as ALU with addition of buffers.
+
+cache_memory:
+  input -> INPUT, SET, CLK, RESET
+  output -> OUTPUT
+  purpose -> Same as buffer but the value is stored and changed when SET = 1.
+
+cached_alu:
+  input -> A, B, SR_IN, SEL_FCT, CLK, RESET
+  output -> S, SR_OUR
+  contains -> buffered_alu, cache_memory
+  purpose -> Same as Buffered_ALU with addition of cache memories.
+
+memory_instructions:
+  input -> CLK, RESET
+  output -> INSTRUCTION
+  contains -> instructions.txt
+  purpose -> Reads the list of instructions from the instructions.txt file and at each rising edge outputs the next instruction.
+
+instructions:
+  input -> CLK, RESET
+  output -> SEL_FCT, SEL_ROUTE, SEL_OUT
+  contains -> memory_instructions
+  purpose -> Splits the instructions from the memory_instruction block into SEL_FCT, SEL_ROUTE, SEL_OUT
+
+microcontroller:
+  input -> A, B, SR_IN, CLK, RESET
+  output -> RES_OUT, SR_OUT
+  contains -> cached_alu, instructions
+  purpose -> microcontroller capable of exeuting a program based on A, B, SR_IN inputs.

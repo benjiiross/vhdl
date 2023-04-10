@@ -1,28 +1,65 @@
 [libraries]
 
 alu.files = [
-  'microcontroller\buffered_alu\ALU\alu.vhd',
-  'microcontroller\buffered_alu\ALU\testbench.vhd',
+  'microcontroller\cached_alu\buffered_alu\alu\alu.vhd',
+  'microcontroller\cached_alu\buffered_alu\alu\alu_testbench.vhd',
 ]
 
-memory.files = [
-  'microcontroller\buffered_alu\Memory\memory.vhd',
-  'microcontroller\buffered_alu\Memory\testbench.vhd',
+buffer.files = [
+  'microcontroller\cached_alu\buffered_alu\buffer\buffer.vhd',
+  'microcontroller\cached_alu\buffered_alu\buffer\buffer_testbench.vhd',
 ]
 
 buffered_alu.files = [
-  'microcontroller\buffered_alu\buffered_alu.vhd',
-  'microcontroller\buffered_alu\alu.vhd',
-  'microcontroller\buffered_alu\memory.vhd',
-  'microcontroller\buffered_alu\testbench.vhd',
+  'microcontroller\cached_alu\buffered_alu\alu.vhd',
+  'microcontroller\cached_alu\buffered_alu\buffer.vhd',
+  
+  'microcontroller\cached_alu\buffered_alu\buffered_alu.vhd',
+  'microcontroller\cached_alu\buffered_alu\buffered_alu_testbench.vhd',
+]
+
+memory.files = [
+  'microcontroller\cached_alu\memory_cache\memory_cache.vhd',
+  'microcontroller\cached_alu\memory_cache\memory_cache_testbench.vhd',
 ]
 
 cached_alu.files = [
-  'cached_alu\buffered_alu.vhd',
-  'cached_alu\cached_alu.vhd',
-  'cached_alu\memory_cache.vhd',
-  'cached_alu\testbench.vhd',
-  'cached_alu\res_out_1.vhd',
-  'cached_alu\res_out_2.vhd',
-  'cached_alu\res_out_3.vhd',
+  'microcontroller\cached_alu\alu.vhd',
+  'microcontroller\cached_alu\buffer.vhd',
+  'microcontroller\cached_alu\buffered_alu.vhd',
+  'microcontroller\cached_alu\memory_cache.vhd',
+  
+  'microcontroller\cached_alu\cached_alu.vhd',
+  'microcontroller\cached_alu\res_out_1.vhd',
+  'microcontroller\cached_alu\res_out_2.vhd',
+  'microcontroller\cached_alu\res_out_3.vhd',
+]
+
+memory_instructions.files = [
+  'microcontroller\instructions\memory_instructions\memory_instructions.vhd',
+  'microcontroller\instructions\memory_instructions\memory_instructions_testbench.vhd',
+]
+
+instructions.files = [
+  'microcontroller\instructions\memory_instructions.vhd',
+  'microcontroller\instructions\buffer.vhd',
+  
+  'microcontroller\instructions\instructions.vhd',
+  'microcontroller\instructions\instructions_testbench.vhd',
+]
+
+microcontroller.files = [
+  'microcontroller\alu.vhd',
+  'microcontroller\buffer.vhd',
+  'microcontroller\buffered_alu.vhd',
+  'microcontroller\cached_alu.vhd',
+  'microcontroller\instructions.vhd',
+  'microcontroller\memory_cache.vhd',
+  'microcontroller\memory_instructions.vhd',
+  'microcontroller\res_out_1.vhd',
+  'microcontroller\res_out_2.vhd',
+  'microcontroller\res_out_3.vhd',
+  
+  'microcontroller\microcontroller.vhd',
+  'microcontroller\microcontroller_testbench.vhd',
 ]

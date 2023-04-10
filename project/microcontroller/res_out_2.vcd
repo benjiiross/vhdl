@@ -1,0 +1,1830 @@
+$date
+  Mon Apr 10 14:36:12 2023
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$var reg 2 ! sr_in[1:0] $end
+$var reg 4 " a[3:0] $end
+$var reg 4 # b[3:0] $end
+$var reg 1 $ reset $end
+$var reg 1 % clk $end
+$var reg 8 & s[7:0] $end
+$var reg 2 ' sr_out[1:0] $end
+$scope module microcontroller_tb $end
+$var reg 1 ( clk $end
+$var reg 1 ) reset $end
+$var reg 4 * a_in[3:0] $end
+$var reg 4 + b_in[3:0] $end
+$var reg 2 , sr_in[1:0] $end
+$var reg 8 - res_out[7:0] $end
+$var reg 2 . sr_out[1:0] $end
+$var reg 4 / sel_fct[3:0] $end
+$var reg 4 0 sel_route[3:0] $end
+$var reg 2 1 sel_out[1:0] $end
+$scope module inst $end
+$var reg 1 2 clk $end
+$var reg 1 3 reset $end
+$var reg 4 4 sel_fct[3:0] $end
+$var reg 4 5 sel_route[3:0] $end
+$var reg 2 6 sel_out[1:0] $end
+$var reg 10 7 instruction[9:0] $end
+$scope module mem_instructions $end
+$var reg 1 8 clk $end
+$var reg 1 9 reset $end
+$var reg 10 : instruction[9:0] $end
+$comment instructions is not handled $end
+$var reg 1 ; isstartup $end
+$var integer 32 < instructions_size $end
+$upscope $end
+$scope module mem_sel_fct $end
+$var reg 1 = clk $end
+$var reg 1 > reset $end
+$var reg 4 ? input[3:0] $end
+$var reg 4 @ output[3:0] $end
+$upscope $end
+$scope module mem_sel_out $end
+$var reg 1 A clk $end
+$var reg 1 B reset $end
+$var reg 2 C input[1:0] $end
+$var reg 2 D output[1:0] $end
+$upscope $end
+$upscope $end
+$scope module alu $end
+$var reg 2 E sr_in[1:0] $end
+$var reg 4 F a_in[3:0] $end
+$var reg 4 G b_in[3:0] $end
+$var reg 1 H reset $end
+$var reg 1 I clk $end
+$var reg 4 J sel_fct[3:0] $end
+$var reg 4 K sel_route[3:0] $end
+$var reg 2 L sel_out[1:0] $end
+$var reg 8 M res_out[7:0] $end
+$var reg 2 N sr_out[1:0] $end
+$var reg 8 O mem_cache_1_in[7:0] $end
+$var reg 8 P mem_cache_1_out[7:0] $end
+$var reg 1 Q mem_cache_1_set $end
+$var reg 8 R mem_cache_2_in[7:0] $end
+$var reg 8 S mem_cache_2_out[7:0] $end
+$var reg 1 T mem_cache_2_set $end
+$var reg 4 U alu_a[3:0] $end
+$var reg 4 V alu_b[3:0] $end
+$var reg 8 W alu_s[7:0] $end
+$scope module mem_cache_1 $end
+$var reg 1 X clk $end
+$var reg 1 Y reset $end
+$var reg 8 Z input[7:0] $end
+$var reg 1 [ set $end
+$var reg 8 \ output[7:0] $end
+$upscope $end
+$scope module mem_cache_2 $end
+$var reg 1 ] clk $end
+$var reg 1 ^ reset $end
+$var reg 8 _ input[7:0] $end
+$var reg 1 ` set $end
+$var reg 8 a output[7:0] $end
+$upscope $end
+$scope module b_alu $end
+$var reg 4 b sel_fct[3:0] $end
+$var reg 2 c sr_in[1:0] $end
+$var reg 4 d a[3:0] $end
+$var reg 4 e b[3:0] $end
+$var reg 1 f reset $end
+$var reg 1 g clk $end
+$var reg 2 h sr_out[1:0] $end
+$var reg 8 i s[7:0] $end
+$var reg 4 j a_buf[3:0] $end
+$var reg 4 k b_buf[3:0] $end
+$var reg 2 l sr_in_buf[1:0] $end
+$scope module buffer_a $end
+$var reg 1 m clk $end
+$var reg 1 n reset $end
+$var reg 4 o input[3:0] $end
+$var reg 4 p output[3:0] $end
+$upscope $end
+$scope module buffer_b $end
+$var reg 1 q clk $end
+$var reg 1 r reset $end
+$var reg 4 s input[3:0] $end
+$var reg 4 t output[3:0] $end
+$upscope $end
+$scope module buffer_sr_in $end
+$var reg 1 u clk $end
+$var reg 1 v reset $end
+$var reg 2 w input[1:0] $end
+$var reg 2 x output[1:0] $end
+$upscope $end
+$scope module alu1 $end
+$var reg 4 y sel_fct[3:0] $end
+$var reg 2 z sr_in[1:0] $end
+$var reg 4 { a[3:0] $end
+$var reg 4 | b[3:0] $end
+$var reg 1 } reset $end
+$var reg 1 !" clk $end
+$var reg 2 "" sr_out[1:0] $end
+$var reg 8 #" s[7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b00 !
+b0100 "
+b1111 #
+0$
+0%
+b00000000 &
+b00 '
+0(
+0)
+b0100 *
+b1111 +
+b00 ,
+b00000000 -
+b00 .
+b0000 /
+bUUUU 0
+b00 1
+02
+03
+b0000 4
+bUUUU 5
+b00 6
+bUUUUUUUUUU 7
+08
+09
+bUUUUUUUUUU :
+0;
+b1011 <
+0=
+0>
+bUUUU ?
+b0000 @
+0A
+0B
+bUU C
+b00 D
+b00 E
+b0100 F
+b1111 G
+0H
+0I
+b0000 J
+bUUUU K
+b00 L
+b00000000 M
+b00 N
+b00000000 O
+b00000000 P
+0Q
+b00000000 R
+b00000000 S
+0T
+b0000 U
+b0000 V
+b00000000 W
+0X
+0Y
+b00000000 Z
+0[
+b00000000 \
+0]
+0^
+b00000000 _
+0`
+b00000000 a
+b0000 b
+b00 c
+b0000 d
+b0000 e
+0f
+0g
+b00 h
+b00000000 i
+b0000 j
+b0000 k
+b00 l
+0m
+0n
+b0000 o
+b0000 p
+0q
+0r
+b0000 s
+b0000 t
+0u
+0v
+b00 w
+b00 x
+b0000 y
+b00 z
+b0000 {
+b0000 |
+0}
+0!"
+b00 ""
+b00000000 #"
+#5000000
+1%
+1(
+b0000 0
+12
+b0000 5
+b0000000000 7
+18
+b0000000000 :
+1=
+b0000 ?
+1A
+b00 C
+1I
+b0000 K
+b0100 U
+1X
+1]
+b0100 d
+1g
+1m
+b0100 o
+1q
+1u
+1!"
+#10000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+b0100 j
+0m
+b0100 p
+0q
+0u
+b0100 {
+0!"
+#15000000
+1%
+1(
+b0001 0
+12
+b0001 5
+b0000000100 7
+18
+b0000000100 :
+1=
+1A
+1I
+b0001 K
+b1111 V
+1X
+1]
+b1111 e
+1g
+1m
+1q
+b1111 s
+1u
+1!"
+#20000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+b1111 k
+0m
+0q
+b1111 t
+0u
+b1111 |
+0!"
+#25000000
+1%
+1(
+b0000 0
+12
+b0000 5
+b1110000000 7
+18
+b1110000000 :
+1=
+b1110 ?
+1A
+1I
+b0000 K
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#30000000
+0%
+0(
+b1110 /
+02
+b1110 4
+08
+0=
+b1110 @
+0A
+0I
+b1110 J
+0X
+0]
+b1110 b
+0g
+0m
+0q
+0u
+b1110 y
+0!"
+#35000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#40000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+b00010011 W
+0X
+0]
+0g
+b00010011 i
+0m
+0q
+0u
+0!"
+b00010011 #"
+#45000000
+1%
+1(
+b1110 0
+12
+b1110 5
+b0000111000 7
+18
+b0000111000 :
+1=
+b0000 ?
+1A
+1I
+b1110 K
+b0011 V
+1X
+1]
+b0011 e
+1g
+1m
+1q
+b0011 s
+1u
+1!"
+#50000000
+0%
+0(
+b0000 /
+02
+b0000 4
+08
+0=
+b0000 @
+0A
+0I
+b0000 J
+0X
+0]
+b0000 b
+0g
+b0011 k
+0m
+0q
+b0011 t
+0u
+b0000 y
+b0011 |
+0!"
+#55000000
+1%
+1(
+12
+b0111111000 7
+18
+b0111111000 :
+1=
+b0111 ?
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#60000000
+0%
+0(
+b0111 /
+02
+b0111 4
+08
+0=
+b0111 @
+0A
+0I
+b0111 J
+b00000000 W
+0X
+0]
+b0111 b
+0g
+b00000000 i
+0m
+0q
+0u
+b0111 y
+0!"
+b00000000 #"
+#65000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#70000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+b00000111 W
+0X
+0]
+0g
+b00000111 i
+0m
+0q
+0u
+0!"
+b00000111 #"
+#75000000
+1%
+1(
+b1100 0
+12
+b1100 5
+b0000110000 7
+18
+b0000110000 :
+1=
+b0000 ?
+1A
+1I
+b1100 K
+b0111 U
+1X
+1]
+b0111 d
+1g
+1m
+b0111 o
+1q
+1u
+1!"
+#80000000
+0%
+0(
+b0000 /
+02
+b0000 4
+08
+0=
+b0000 @
+0A
+0I
+b0000 J
+0X
+0]
+b0000 b
+0g
+b0111 j
+0m
+b0111 p
+0q
+0u
+b0000 y
+b0111 {
+0!"
+#85000000
+1%
+1(
+12
+b0011110000 7
+18
+b0011110000 :
+1=
+b0011 ?
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#90000000
+0%
+0(
+b0011 /
+02
+b0011 4
+08
+0=
+b0011 @
+0A
+0I
+b0011 J
+b00000000 W
+0X
+0]
+b0011 b
+0g
+b00000000 i
+0m
+0q
+0u
+b0011 y
+0!"
+b00000000 #"
+#95000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#100000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+b00001000 W
+0X
+0]
+0g
+b00001000 i
+0m
+0q
+0u
+0!"
+b00001000 #"
+#105000000
+1%
+1(
+12
+b0011110011 7
+18
+b0011110011 :
+1=
+1A
+b11 C
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#110000000
+0%
+0(
+b11 1
+02
+b11 6
+08
+0=
+0A
+b11 D
+0I
+b11 L
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#115000000
+1%
+b00001000 &
+1(
+b00001000 -
+12
+18
+1=
+1A
+1I
+b00001000 M
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#120000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#125000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#130000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#135000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#140000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#145000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#150000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#155000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#160000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#165000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#170000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#175000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#180000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#185000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#190000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#195000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#200000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#205000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#210000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#215000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#220000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#225000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#230000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#235000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#240000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#245000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#250000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#255000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#260000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#265000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#270000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#275000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#280000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#285000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#290000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#295000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#300000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#305000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#310000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#315000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#320000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#325000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#330000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#335000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#340000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#345000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#350000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#355000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#360000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#365000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#370000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#375000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#380000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#385000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#390000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#395000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#400000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#405000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#410000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#415000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#420000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#425000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#430000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#435000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#440000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#445000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#450000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#455000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#460000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#465000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#470000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#475000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#480000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#485000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
+#490000000
+0%
+0(
+02
+08
+0=
+0A
+0I
+0X
+0]
+0g
+0m
+0q
+0u
+0!"
+#495000000
+1%
+1(
+12
+18
+1=
+1A
+1I
+1X
+1]
+1g
+1m
+1q
+1u
+1!"
